@@ -1,9 +1,13 @@
 {
   "name": "root",
   "scripts": {
-    "start": "npm-run-all --parallel start:**",
-    "start:react-native": "npm -w react-native start",
-    "start:server": "npm -w server start"
+    "start": "run-p start:*",
+    "start:app": "npm -w react-native start",
+    "start:server": "npm -w server start",
+    "fmt": "run-p fmt:*",
+    "fmt:app": "npm -w react-native run fmt",
+    "fmt:server": "npm -w server run fmt",
+    "lint": "run-p lint:*"
   },
   "private": true,
   "workspaces": [
