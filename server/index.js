@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "path";
 import { Server } from "socket.io";
 import { createToken } from "./token.js";
+import { createToken } from "./token.js";
 
 const app = express();
 const server = createServer(app);
@@ -31,7 +32,6 @@ server.listen(port, () => {
     /**
      * ログイン処理
      */
-  
     const token = createToken(socket.id);
     io.to(socket.id).emit("token", {token: token});
   
