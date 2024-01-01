@@ -9,7 +9,7 @@ interface Context {
   setMessages: Function;
 }
 
-const serverUrl = Platform.OS === 'ios' ? 'http://localhost:4000' : 'http://10.0.2.2:4000';
+const serverUrl = 'https://real-chat-23pq.onrender.com';
 const socket = io(serverUrl);
 
 export const SocketContext = createContext<Context>({
