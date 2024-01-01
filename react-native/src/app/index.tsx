@@ -1,12 +1,12 @@
+import { Redirect } from 'expo-router';
 import { Text, View } from 'react-native';
+import SocketProvider from '../context/SocketContext';
 
 const Index = (): JSX.Element => {
   return (
-    <View>
-      <Text>Index</Text>
-      <Text>Index</Text>
-      <Text>Index</Text>
-    </View>
+    <SocketProvider>
+      <Redirect href='/demo/test' />
+    </SocketProvider>
   );
 };
 
